@@ -1,0 +1,28 @@
+# Дані (завантажуються автоматично)
+lab-2/vhi_data/
+lab-2/household_power_consumption.txt
+lab-2/household_power_consumption.zip
+*.zip
+*.rar
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
