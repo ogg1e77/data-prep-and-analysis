@@ -1,0 +1,16 @@
+# Датасети
+heart_data/
+*.zip
+*.data
+*.names
+
+# Графіки (генеруються при запуску)
+*.png
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+venv/
+.venv/
