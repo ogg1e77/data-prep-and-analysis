@@ -1,0 +1,15 @@
+# Дані (завантажуються автоматично)
+vhi_data/
+
+# Streamlit
+.streamlit/
+
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db
