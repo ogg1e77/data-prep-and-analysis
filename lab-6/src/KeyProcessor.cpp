@@ -35,20 +35,31 @@ bool KeyProcessor::processKey(int key) {
         case '7': mode_ = Mode::PIP;      break;
 
         // ── Стрілочки: зсув зображення (працює в режимі NORMAL/будь-якому) ──
-        case 81:  // ліва стрілка (Linux/OpenCV HighGUI код)
-        case 2424832:
+        // Розширені коди (Windows OpenCV HighGUI повертає >256 для спецклавіш)
+        case 2424832:  // ліва стрілка (Windows)
             if (mode_ == Mode::PIP) pipX_ -= 10; else offsetX_ -= 10;
             break;
-        case 83:  // права стрілка
-        case 2555904:
+        case 2555904:  // права стрілка (Windows)
             if (mode_ == Mode::PIP) pipX_ += 10; else offsetX_ += 10;
             break;
-        case 82:  // верх
-        case 2490368:
+        case 2490368:  // верх (Windows)
             if (mode_ == Mode::PIP) pipY_ -= 10; else offsetY_ -= 10;
             break;
-        case 84:  // низ
-        case 2621440:
+        case 2621440:  // низ (Windows)
+            if (mode_ == Mode::PIP) pipY_ += 10; else offsetY_ += 10;
+            break;
+
+        // ── WASD: запасний варіант зсуву (працює однаково на Linux/Windows/macOS) ──
+        case 'a':
+            if (mode_ == Mode::PIP) pipX_ -= 10; else offsetX_ -= 10;
+            break;
+        case 'd':
+            if (mode_ == Mode::PIP) pipX_ += 10; else offsetX_ += 10;
+            break;
+        case 'w':
+            if (mode_ == Mode::PIP) pipY_ -= 10; else offsetY_ -= 10;
+            break;
+        case 's':
             if (mode_ == Mode::PIP) pipY_ += 10; else offsetY_ += 10;
             break;
 

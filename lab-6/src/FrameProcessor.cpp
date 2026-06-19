@@ -246,7 +246,7 @@ void FrameProcessor::drawOverlayInfo(cv::Mat& frame, Mode mode) {
                 cv::FONT_HERSHEY_SIMPLEX, 0.6, cv::Scalar(0, 255, 0), 2);
     cv::putText(frame, oss2.str(), cv::Point(10, 50),
                 cv::FONT_HERSHEY_SIMPLEX, 0.55, cv::Scalar(0, 255, 0), 2);
-    cv::putText(frame, "Keys: 0-7 modes | arrows move | +/- zoom | ,/. rotate | r reset | q quit",
+    cv::putText(frame, "Keys: 0-7 modes | arrows/WASD move | +/- zoom | ,/. rotate | r reset | q quit",
                 cv::Point(10, frame.rows - 12),
                 cv::FONT_HERSHEY_SIMPLEX, 0.42, cv::Scalar(200, 200, 200), 1);
 }
