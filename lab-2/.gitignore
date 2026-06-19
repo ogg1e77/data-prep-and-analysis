@@ -1,0 +1,18 @@
+# Датасети (завантажуються автоматично)
+vhi_data/
+household_power_consumption.txt
+household_power_consumption.zip
+*.csv
+*.txt
+*.zip
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+venv/
+.venv/
